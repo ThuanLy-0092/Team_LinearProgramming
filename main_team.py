@@ -2,9 +2,33 @@ from MethodsFinalFinal import Problem, Dict, Phase1, Phase2, S2P_Method
 import numpy as np
 import streamlit as st
 
+hide_elements_css = """
+<style>
+/* Ẩn biểu tượng GitHub và các lớp liên quan */
+.css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob, .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137, .viewerBadge_text__1JaDK {
+  display: none !important;
+}
+
+/* Ẩn menu chính (MainMenu) */
+#MainMenu {
+  visibility: hidden !important;
+}
+
+/* Ẩn footer */
+footer {
+  visibility: hidden !important;
+}
+
+/* Ẩn header */
+header {
+  visibility: hidden !important;
+}
+</style>
+"""
+
 # # Thiết lập tiêu đề trang và logo
 st.set_page_config(page_title="Chương Trình Giải Bài Toán Quy Hoạch Tuyến Tính", page_icon=r"logo.jpg")
-
+st.markdown(hide_elements_css, unsafe_allow_html=True)
 # # Hiển thị logo
 logo_path = "LN_Programming.jpg"  # Đường dẫn tới tệp logo
 st.image(logo_path)  # Hiển thị logo với chiều rộng 200 pixel (bạn có thể điều chỉnh chiều rộng theo ý muốn)
